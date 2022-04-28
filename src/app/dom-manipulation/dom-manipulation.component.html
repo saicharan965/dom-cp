@@ -1,0 +1,43 @@
+<div class="container text-center my-4">
+  <app-dom-child #child></app-dom-child>
+</div>
+<hr />
+<div class="container card text-center mt-5">
+  <h5 class="card-title my-1 p-2">Parent Component</h5>
+  <div class="input-group my-4">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Border radius</span>
+    </div>
+    <input type="text" class="form-control" [(ngModel)]="borderRadius" />
+    <span class="input-group-btn mx-2">
+      <button
+        class="btn btn-outline-success"
+        type="button"
+        (click)="changeBRFromParent(borderRadius)"
+      >
+        Change
+      </button>
+    </span>
+  </div>
+
+  <div class="input-group my-4">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Background-color</span>
+    </div>
+    <input
+      type="color"
+      class="form-control"
+      style="height: 38px"
+      [(ngModel)]="backgroundColor"
+    />
+    <span class="input-group-btn mx-2">
+      <button
+        class="btn btn-outline-success"
+        type="button"
+        (click)="changeBgClrFromParent(backgroundColor)"
+      >
+        Change
+      </button>
+    </span>
+  </div>
+</div>

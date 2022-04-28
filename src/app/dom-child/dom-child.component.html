@@ -1,0 +1,47 @@
+<div class="card">
+  <h5 class="card-title">Child Component</h5>
+  <div #childDomDiv class=" my-2container p-4" style="border: 1px solid black">
+    <span class="badge p-3 bg-success"
+      >WELCOME TO DOM_MANIPULATION SESSION</span
+    >
+  </div>
+
+  <div class="container">
+    <div class="input-group my-4">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Border radius</span>
+      </div>
+      <input type="text" class="form-control" [(ngModel)]="borderRadius" />
+      <span class="input-group-btn mx-2">
+        <button
+          class="btn btn-outline-success"
+          type="button"
+          (click)="changeBR(borderRadius)"
+        >
+          Change
+        </button>
+      </span>
+    </div>
+
+    <div class="input-group my-4">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Background-color</span>
+      </div>
+      <input
+        type="color"
+        class="form-control"
+        style="height: 38px"
+        [(ngModel)]="backgroundColor"
+      />
+      <span class="input-group-btn mx-2">
+        <button
+          class="btn btn-outline-success"
+          type="button"
+          (click)="changeBgClr(backgroundColor)"
+        >
+          Change
+        </button>
+      </span>
+    </div>
+  </div>
+</div>
