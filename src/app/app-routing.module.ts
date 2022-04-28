@@ -4,8 +4,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'dom', pathMatch: 'full' },
   { path: 'dom', component: DomManipulationComponent },
-  { path: 'contentProjection', component: ContentProjectionComponent }
+  { path: 'contentProjection', component: ContentProjectionComponent },
+  { path: '**', component: DomManipulationComponent },
+
 ];
 
 @NgModule({
